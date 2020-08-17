@@ -17,7 +17,6 @@ type Packx struct {
 // a package scoped packx instance
 var packx = NewPackx(nil)
 var PackJSON = NewPackx(JsonMarshaller{})
-var PackTOML = NewPackx(TomlMarshaller{})
 var PackXML = NewPackx(XmlMarshaller{})
 var PackYAML = NewPackx(YamlMarshaller{})
 var PackProtobuf = NewPackx(ProtobufMarshaller{})
@@ -320,8 +319,6 @@ func PackWithMarshallerName(message Message, marshallerName string) ([]byte, err
 		marshaller = JsonMarshaller{}
 	case "xml":
 		marshaller = XmlMarshaller{}
-	case "toml", "tml":
-		marshaller = TomlMarshaller{}
 	case "yaml", "yml":
 		marshaller = YamlMarshaller{}
 	case "protobuf", "proto":
@@ -387,8 +384,6 @@ func UnpackWithMarshallerName(stream []byte, dest interface{}, marshallerName st
 		marshaller = JsonMarshaller{}
 	case "xml":
 		marshaller = XmlMarshaller{}
-	case "toml", "tml":
-		marshaller = TomlMarshaller{}
 	case "yaml", "yml":
 		marshaller = YamlMarshaller{}
 	case "protobuf", "proto":
