@@ -14,5 +14,5 @@
 
 ### Install
 ```cassandraql
-go get https://github.com/m2c/kiple-tcp-pkg
+go get github.com/m2c/kiple-tcp-pkg
 ```
