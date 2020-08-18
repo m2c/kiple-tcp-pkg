@@ -93,8 +93,8 @@ type PropertyCache struct {
 	Listener interface{}
 }
 
-// new an ktcp srv instance
-func Newktcp(marshaller Marshaller) *KpTcp {
+// new an kptcp srv instance
+func NewKptcp(marshaller Marshaller) *KpTcp {
 	return &KpTcp{
 		Packx:      NewPackx(marshaller),
 		Mux:        NewMux(),
